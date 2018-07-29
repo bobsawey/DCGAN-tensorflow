@@ -28,6 +28,16 @@ flags.DEFINE_boolean("visualize", False, "True for visualizing, False for nothin
 flags.DEFINE_integer("generate_test_images", 100, "Number of images to generate during test. [100]")
 FLAGS = flags.FLAGS
 
+####Delete all flags before declare#####
+
+def del_all_flags(FLAGS):
+    flags_dict = FLAGS._flags()    
+    keys_list = [keys for keys in flags_dict]    
+    for keys in keys_list:    
+    FLAGS.__delattr__(keys)
+
+del_all_flags(tf.flags.FLAGS)
+
 def main(_):
   pp.pprint(flags.FLAGS.__flags)
 
