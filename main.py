@@ -29,7 +29,7 @@ flags.DEFINE_integer("generate_test_images", 100, "Number of images to generate 
 FLAGS = flags.FLAGS
 
 ####Delete all flags before declare#####
-
+'''
 def del_all_flags(FLAGS):
   flags_dict = FLAGS._flags()    
   keys_list = [keys for keys in flags_dict]    
@@ -37,6 +37,7 @@ def del_all_flags(FLAGS):
     FLAGS.__delattr__(keys)
 
 del_all_flags(tf.flags.FLAGS)
+'''
 
 def main(_):
   pp.pprint(flags.FLAGS.__flags)
