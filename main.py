@@ -6,7 +6,7 @@ from model import DCGAN
 from utils import pp, visualize, to_json, show_all_variables
 
 import tensorflow as tf
-tf.Session.reset()
+
 ####Delete all flags before declare#####
 def del_all_flags(FLAGS):
   flags_dict = FLAGS._flags()    
