@@ -308,7 +308,7 @@ class DCGAN(object):
                     self.inputs: sample_inputs,
                 },
               )
-              backup_pydrive()
+              #backup_pydrive()
               save_images(samples, image_manifold_size(samples.shape[0]),
                     './{}/train_{:02d}_{:04d}.png'.format(config.sample_dir, epoch, idx))
               print("[Sample] d_loss: %.8f, g_loss: %.8f" % (d_loss, g_loss)) 
